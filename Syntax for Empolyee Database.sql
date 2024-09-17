@@ -6,6 +6,7 @@
  --Age int,
  --Gender varchar(50)
  --)
+
  
  --CREATE TABLE EmployeeSalary
  --(EmployeeID int,
