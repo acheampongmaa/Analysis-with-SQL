@@ -46,3 +46,18 @@ END
 FROM EmployeeDemographics
 WHERE Age IS NOT NULL
 ORDER BY Age
+
+
+/* Example 3. Giving employees salary raise */
+
+SELECT firstname, lastname, jobtitle, salary,
+CASE 
+    WHEN jobtitle = 'Sales Personnel' THEN salary + (salary * .10)
+    WHEN jobtitle = 'Accountant' THEN salary + (salary * .05)
+    WHEN jobtitle = 'HR' THEN salary + (salary * .000001)
+    ELSE salary + (salary * .03)
+END AS SalaryAfterRaise    
+FROM EmployeeDemographics
+JOIN
+EmployeeSalary
+ON EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
