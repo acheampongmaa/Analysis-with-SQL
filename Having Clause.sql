@@ -1,5 +1,5 @@
 /* Having Clause */
-/*Exaxmple 1*/
+/*Example 1*/
 SELECT jobtitle, count(jobtitle)
 FROM EmployeeDemographics
 JOIN EmployeeSalary
